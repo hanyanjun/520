@@ -2,7 +2,7 @@
     <div class="center-me">
   <div class="equalizer"></div>
   <audio  autoplay muted loop style="opacity : 0">
-  <source src="http://ip.h5.nf01.sycdn.kuwo.cn/cf1b43bbec748febfe2956d76639bded/60a382c6/resource/n2/79/43/1456510522.mp3" type="audio/mp3">
+  <source src="../assets/9420.mp3" type="audio/mp3">
 Your browser does not support the audio element.
 </audio>
 </div>

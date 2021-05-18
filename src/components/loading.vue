@@ -21,10 +21,13 @@
 <script>
 export default {
     data(){return{
-        rate : 0
-    }},
-    setup() {
         
+    }},
+    props : {
+        rate : Number
+    },
+    mounted(){
+
     }
 }
 </script>

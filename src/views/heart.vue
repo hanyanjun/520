@@ -1,10 +1,30 @@
 <template>
+<div class="wrap">
 <canvas id="heart"></canvas>
+<p class="number">{{number}}天</p>
+</div>
 </template>
 
 <script>
 export default {
+    data(){return{
+        timer : null,
+        max : 365,
+        number : 0
+    }},
     mounted(){
+        this.timer = setInterval(()=>{
+            let num = Math.floor ( Math.random() * 10 + 1 ) ;
+            num = this.number + num;
+            if(num >= this.max){
+                clearInterval(this.timer);
+                this.number = this.max
+            }else{
+                this.number = num;
+            }
+        },50)
+
+const el = document.querySelector('.number')
 window.requestAnimationFrame =
     window.__requestAnimationFrame ||
         window.requestAnimationFrame ||
@@ -156,10 +176,25 @@ var init = function () {
 </script>
 
 <style scoped>
+.wrap{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background-color: rgba(0,0,0,1);
+}
+.number{
+    width: 100px;
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    color: white;
+    margin-left: -50px;
+    font-size: 30px;
+}
 canvas {
   position: absolute;
   left:0;
-  top: 0;
+  top: -10%;
   width: 100%;
   height: 100%;
   background-color: rgba(0,0,0,.2);

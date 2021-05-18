@@ -2,10 +2,12 @@
   <div id="app">
     <Music  v-if="step !== 0" />
     <Screen v-if="step === 0" @onChange="onChange"/>
-    <Loading v-if="step === 1" />
+    <Loading v-if="step === 1" :rate="rate" />
     <Heart v-if="step === 2" />
-    <Carousel v-if="step === 3"/>
-    <Lottery v-if="step === 4"/>
+    <Carousel v-if="step === 3" @onChange="onChangePhoto"/>
+    <Photo1 v-if="step === 4 && photo === 1" />
+    <Photo2 v-if="step === 4 && photo === 2" />
+    <Lottery v-if="step === 5"/>
     <router-view/>
   </div>
 </template>
@@ -24,7 +26,23 @@ export default {
   name: 'App',
   components : {Music,Heart,Screen,Photo1,Photo2,Loading,Carousel,Lottery},
   data(){return{
-    step : 0
+    step : 0,
+    imgs : [
+      '../assets/1.jpg',
+      '../assets/2.jpg',
+      '../assets/3.jpg',
+      '../assets/4.jpg',
+      '../assets/5.jpg',
+      '../assets/6.jpg',
+      '../assets/7.jpg',
+      '../assets/8.jpg',
+      '../assets/9.jpg',
+      '../assets/10.jpg',
+      '../assets/11.jpg',
+      ],
+    rate : 0,
+    timer : null,
+    photo : 0
   }},
   mounted(){
       let startY = 0;
@@ -61,6 +79,16 @@ export default {
   methods:{
     onChange(){
       this.step = this.step + 1;
+      this.timer = setInterval(()=>{
+        this.rate += 5;
+        if(this.rate === 100){
+          clearInterval(this.timer)
+        }
+      },300)
+    },
+    onChangePhoto(index){
+      this.photo = index;
+      this.step = 4
     },
     // 减
     change1(){
@@ -72,8 +100,12 @@ export default {
     },
     // 加
     change2(){
-      if(this.step !== 0){
-        this.step = this.step + 1;
+      if(this.step !== 0 && this.imgs.length){
+        let s = this.step + 1;
+        if(s === 4){
+          s = 5
+        }
+        this.step = s;
       }
     }
   }

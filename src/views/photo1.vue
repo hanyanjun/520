@@ -1,29 +1,40 @@
 <template>
 <ul class="grid">
-  <li><img src='https://images.unsplash.com/photo-1514911278673-b33f6439fad3?auto=format&fit=crop&w=250&h=250&q=80' alt="图片" /></li>
-  <li><img src='https://images.unsplash.com/photo-1514911278673-b33f6439fad3?auto=format&fit=crop&w=250&h=250&q=80' alt="图片" /></li>
-  <li><img src='https://images.unsplash.com/photo-1514911278673-b33f6439fad3?auto=format&fit=crop&w=250&h=250&q=80' alt="图片" /></li>
-  <li><img src='https://images.unsplash.com/photo-1514911278673-b33f6439fad3?auto=format&fit=crop&w=250&h=250&q=80' alt="图片" /></li>
-  <li><img src='https://images.unsplash.com/photo-1514911278673-b33f6439fad3?auto=format&fit=crop&w=250&h=250&q=80' alt="图片" /></li>
-  <li><img src='https://images.unsplash.com/photo-1514911278673-b33f6439fad3?auto=format&fit=crop&w=250&h=250&q=80' alt="图片" /></li>
-  <li><img src='https://images.unsplash.com/photo-1514911278673-b33f6439fad3?auto=format&fit=crop&w=250&h=250&q=80' alt="图片" /></li>
-  <li><img src='https://images.unsplash.com/photo-1514911278673-b33f6439fad3?auto=format&fit=crop&w=250&h=250&q=80' alt="图片" /></li>
-  <li><img src='https://images.unsplash.com/photo-1514911278673-b33f6439fad3?auto=format&fit=crop&w=250&h=250&q=80' alt="图片" /></li>
-  <li><img src='https://images.unsplash.com/photo-1514911278673-b33f6439fad3?auto=format&fit=crop&w=250&h=250&q=80' alt="图片" /></li>
-  <li><img src='https://images.unsplash.com/photo-1514911278673-b33f6439fad3?auto=format&fit=crop&w=250&h=250&q=80' alt="图片" /></li>
-  <li><img src='https://images.unsplash.com/photo-1514911278673-b33f6439fad3?auto=format&fit=crop&w=250&h=250&q=80' alt="图片" /></li>
-  <li><img src='https://images.unsplash.com/photo-1514911278673-b33f6439fad3?auto=format&fit=crop&w=250&h=250&q=80' alt="图片" /></li>
-  <li><img src='https://images.unsplash.com/photo-1514911278673-b33f6439fad3?auto=format&fit=crop&w=250&h=250&q=80' alt="图片" /></li>
-  <li><img src='https://images.unsplash.com/photo-1514911278673-b33f6439fad3?auto=format&fit=crop&w=250&h=250&q=80' alt="图片" /></li>
-  <li><img src='https://images.unsplash.com/photo-1514911278673-b33f6439fad3?auto=format&fit=crop&w=250&h=250&q=80' alt="图片" /></li>
-  <li><img src='https://images.unsplash.com/photo-1514911278673-b33f6439fad3?auto=format&fit=crop&w=250&h=250&q=80' alt="图片" /></li>
-  <li><img src='https://images.unsplash.com/photo-1514911278673-b33f6439fad3?auto=format&fit=crop&w=250&h=250&q=80' alt="图片" /></li>
-  <li><img src='https://images.unsplash.com/photo-1514911278673-b33f6439fad3?auto=format&fit=crop&w=250&h=250&q=80' alt="图片" /></li>
-  <li><img src='https://images.unsplash.com/photo-1514911278673-b33f6439fad3?auto=format&fit=crop&w=250&h=250&q=80' alt="图片" /></li>
-  <li><img src='https://images.unsplash.com/photo-1514911278673-b33f6439fad3?auto=format&fit=crop&w=250&h=250&q=80' alt="图片" /></li>
-  <li><img src='https://images.unsplash.com/photo-1514911278673-b33f6439fad3?auto=format&fit=crop&w=250&h=250&q=80' alt="图片" /></li>
-  <li><img src='https://images.unsplash.com/photo-1514911278673-b33f6439fad3?auto=format&fit=crop&w=250&h=250&q=80' alt="图片" /></li>
-  <li><img src='https://images.unsplash.com/photo-1514911278673-b33f6439fad3?auto=format&fit=crop&w=250&h=250&q=80' alt="图片" /></li>
+
+  <li><img src='../assets/1.jpg' alt="图片" /></li>
+  <li><img src='../assets/2.jpg' alt="图片" /></li>
+  <li><img src='../assets/3.jpg' alt="图片" /></li>
+  <li><img src='../assets/4.jpg' alt="图片" /></li>
+  <li><img src='../assets/5.jpg' alt="图片" /></li>
+  <li><img src='../assets/6.jpg' alt="图片" /></li>
+  <li><img src='../assets/7.jpg' alt="图片" /></li>
+  <li><img src='../assets/8.jpg' alt="图片" /></li>
+  <li><img src='../assets/9.jpg' alt="图片" /></li>
+  <li><img src='../assets/10.jpg' alt="图片" /></li>
+  <li><img src='../assets/11.jpg' alt="图片" /></li>
+  <li><img src='../assets/12.jpg' alt="图片" /></li>
+  <li><img src='../assets/13.jpg' alt="图片" /></li>
+  <li><img src='../assets/14.jpg' alt="图片" /></li>
+  <li><img src='../assets/15.jpg' alt="图片" /></li>
+  <li><img src='../assets/16.jpg' alt="图片" /></li>
+  <li><img src='../assets/17.jpg' alt="图片" /></li>
+  <li><img src='../assets/1.jpg' alt="图片" /></li>
+  <li><img src='../assets/2.jpg' alt="图片" /></li>
+  <li><img src='../assets/3.jpg' alt="图片" /></li>
+  <li><img src='../assets/4.jpg' alt="图片" /></li>
+  <li><img src='../assets/5.jpg' alt="图片" /></li>
+  <li><img src='../assets/6.jpg' alt="图片" /></li>
+  <li><img src='../assets/7.jpg' alt="图片" /></li>
+  <li><img src='../assets/8.jpg' alt="图片" /></li>
+  <li><img src='../assets/9.jpg' alt="图片" /></li>
+  <li><img src='../assets/10.jpg' alt="图片" /></li>
+  <li><img src='../assets/11.jpg' alt="图片" /></li>
+  <li><img src='../assets/12.jpg' alt="图片" /></li>
+  <li><img src='../assets/13.jpg' alt="图片" /></li>
+  <li><img src='../assets/14.jpg' alt="图片" /></li>
+  <li><img src='../assets/15.jpg' alt="图片" /></li>
+  <li><img src='../assets/16.jpg' alt="图片" /></li>
+  <li><img src='../assets/17.jpg' alt="图片" /></li>
   <li><img src='https://images.unsplash.com/photo-1514911278673-b33f6439fad3?auto=format&fit=crop&w=250&h=250&q=80' alt="图片" /></li>
 </ul>
 </template>
@@ -31,8 +42,10 @@
 
 <style scoped>
 img {
-  width: 100%;
+    width: 75px;
   transform: scaleY(1.1547);
+  object-fit: contain;
+  height: 75px;
 }
 
 .grid{
@@ -47,6 +60,7 @@ img {
 
 .grid > li{
   margin: 36% 0 36% 0;
+  
 }
 .grid > li:nth-child(2n+1){
   transform: skewY(30deg);

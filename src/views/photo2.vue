@@ -1,6 +1,7 @@
 <template>
   <div class="wrapper">
-    <div class="box item-1" v-for="(item,index) in imgs"  :key="index" @click="unLock(index)"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/740816/img1.jpg" alt="">
+    <div class="box item-1" v-for="(item,index) in imgs"  :key="index" @click="unLock(index)">
+        <img :src="item" alt="">
       <div :class="['overlay','ovrl-left','ovrl-1', openArr.includes(index) && 'move-right']">盒</div>
       <div :class="['overlay','ovrl-right','ovrl-1', openArr.includes(index) && 'move-left']">盲</div>
       <div :class="['locker' , openArr.includes(index) && 'unlock']"><i class="arrow fa fa-arrows-h" aria-hidden="true"></i></div>
@@ -14,12 +15,13 @@ export default {
     data(){return{
         openArr : [],
         imgs : [
-    'https://s3-us-west-2.amazonaws.com/s.cdpn.io/740816/img1.jpg',
-    'https://s3-us-west-2.amazonaws.com/s.cdpn.io/740816/img1.jpg',
-    'https://s3-us-west-2.amazonaws.com/s.cdpn.io/740816/img1.jpg',
-    'https://s3-us-west-2.amazonaws.com/s.cdpn.io/740816/img1.jpg',
-    'https://s3-us-west-2.amazonaws.com/s.cdpn.io/740816/img1.jpg',
-    'https://s3-us-west-2.amazonaws.com/s.cdpn.io/740816/img1.jpg',
+    '../assets/1.jpg',
+    '../assets/4.jpg',
+    '../assets/8.jpg',
+    '../assets/11.jpg',
+    '../assets/14.jpg',
+    '../assets/16.jpg',
+    '../assets/17.jpg',
 ]
     }},
     setup() {

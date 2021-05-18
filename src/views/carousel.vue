@@ -3,29 +3,33 @@
     <div id="drag-container">
   <div id="spin-container">
     <!-- Add your images (or video) here -->
-    <img src="https://images.pexels.com/photos/206395/pexels-photo-206395.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="">
-    <img src="https://images.pexels.com/photos/1391498/pexels-photo-1391498.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="">
-    <img src="https://images.pexels.com/photos/1382731/pexels-photo-1382731.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="">
-    <img src="https://images.pexels.com/photos/1758144/pexels-photo-1758144.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="">
-    <img src="https://images.pexels.com/photos/1382734/pexels-photo-1382734.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="">
-    <img src="https://images.pexels.com/photos/1462636/pexels-photo-1462636.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="">
+    <img src="../assets/1.jpg" @click="skipP1" alt="">
+    <img src="../assets/4.jpg" @click="skipP2" alt="">
+    <img src="../assets/8.jpg" alt="">
+    <img src="../assets/11.jpg" alt="">
+    <img src="../assets/14.jpg" alt="">
+    <img src="../assets/16.jpg" alt="">
+    <img src="../assets/17.jpg" alt="">
     
     <!-- Example image with link -->
-    <a target="_blank" href="https://images.pexels.com/photos/139829/pexels-photo-139829.jpeg">
+    <!-- <a target="_blank" href="https://images.pexels.com/photos/139829/pexels-photo-139829.jpeg">
       <img src="https://images.pexels.com/photos/139829/pexels-photo-139829.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="">
-    </a>
+    </a> -->
+
+   <!-- <img src="https://images.pexels.com/photos/139829/pexels-photo-139829.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt=""> -->
+
+
 
     <!-- Example add video  -->
-    <video controls autoplay="autoplay" loop>
+    <!-- <video controls autoplay="autoplay" loop>
       <source src="https://player.vimeo.com/external/322244668.sd.mp4?s=338c48ac2dfcb1d4c0689968b5baf94eee6ca0c1&profile_id=165&oauth2_token_id=57447761" type="video/mp4">
-    </video>
+    </video> -->
 
     <!-- Text at center of ground -->
-    <p>3D Tiktok Carousel</p>
+    <!-- <p>3D Tiktok Carousel</p> -->
   </div>
   <div id="ground"></div>
 </div>
-<div id="music-container"></div>
 </div>
 </template>
 
@@ -34,8 +38,16 @@ export default {
     setup() {
         
     },
+    methods:{
+        skipP1(){
+            this.$emit('onChange',1);
+        },
+        skipP2(){
+            this.$emit('onChange',2);
+        }
+    },
     mounted(){
-        // Author: Hoang Tran (https://www.facebook.com/profile.php?id=100004848287494)
+// Author: Hoang Tran (https://www.facebook.com/profile.php?id=100004848287494)
 // Github verson (1 file .html): https://github.com/HoangTran0410/3DCarousel/blob/master/index.html
 
 
@@ -66,8 +78,8 @@ setTimeout(init, 1000);
 var odrag = document.getElementById('drag-container');
 var ospin = document.getElementById('spin-container');
 var aImg = ospin.getElementsByTagName('img');
-var aVid = ospin.getElementsByTagName('video');
-var aEle = [...aImg, ...aVid]; // combine 2 arrays
+// var aVid = ospin.getElementsByTagName('video');
+var aEle = [...aImg]; // combine 2 arrays
 
 // Size of images
 ospin.style.width = imgWidth + "px";
@@ -108,15 +120,6 @@ var sX, sY, nX, nY, desX = 0,
 if (autoRotate) {
   var animationName = (rotateSpeed > 0 ? 'spin' : 'spinRevert');
   ospin.style.animation = `${animationName} ${Math.abs(rotateSpeed)}s infinite linear`;
-}
-
-// add background music
-if (bgMusicURL) {
-  document.getElementById('music-container').innerHTML += `
-<audio src="${bgMusicURL}" ${bgMusicControls? 'controls': ''} autoplay loop>    
-<p>If you are reading this, it is because your browser does not support the audio element.</p>
-</audio>
-`;
 }
 
 // setup events
@@ -164,7 +167,6 @@ document.onmousewheel = function(e) {
   radius += d;
   init(1);
 };
-
     }
 }
 </script>
@@ -173,15 +175,19 @@ document.onmousewheel = function(e) {
 <style scoped>
 
 .wrap {
-  width: 100%;
-  height: 100%;
+  width: 200%;
+  height: 200%;
   /* for touch screen */
   touch-action: none; 
   overflow: hidden;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  position: absolute;
+  left: -50%;
+  top: -50%;
   background: #111;
+    transform: scale(0.5);
   -webkit-perspective: 1000px;
           perspective: 1000px;
   -webkit-transform-style: preserve-3d;
@@ -246,18 +252,10 @@ document.onmousewheel = function(e) {
 #music-container {
   position: absolute;
   top: 0;
+  opacity: 0;
   left: 0;
 }
 
-@-webkit-keyframes spin {
-  from{
-    -webkit-transform: rotateY(0deg);
-            transform: rotateY(0deg);
-  } to{
-    -webkit-transform: rotateY(360deg);
-            transform: rotateY(360deg);
-  }
-}
 
 @keyframes spin {
   from{
@@ -266,15 +264,6 @@ document.onmousewheel = function(e) {
   } to{
     -webkit-transform: rotateY(360deg);
             transform: rotateY(360deg);
-  }
-}
-@-webkit-keyframes spinRevert {
-  from{
-    -webkit-transform: rotateY(360deg);
-            transform: rotateY(360deg);
-  } to{
-    -webkit-transform: rotateY(0deg);
-            transform: rotateY(0deg);
   }
 }
 @keyframes spinRevert {
