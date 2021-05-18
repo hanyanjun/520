@@ -1,7 +1,7 @@
 <template>
-    <div class="center-me">
+    <div class="center-me" @click="onPlay">
   <div class="equalizer"></div>
-  <audio  autoplay muted loop style="opacity : 0">
+  <audio   loop style="opacity : 0" ref="audio">
   <source src="../assets/9420.mp3" type="audio/mp3">
 Your browser does not support the audio element.
 </audio>
@@ -15,6 +15,11 @@ export default {
     }},
     setup() {
         
+    },
+    methods:{
+      onPlay(){
+        this.$refs.audio.play();
+      }
     },
     mounted(){
         (function() {

@@ -5,7 +5,6 @@
       <div :class="['overlay','ovrl-right','ovrl-1', index === 0 && 'move-left']">520</div>
       <div :class="['locker' , index === 0 && 'unlock']"><i class="arrow fa fa-arrows-h" aria-hidden="true"></i></div>
     </div>
-
   </div>
 </template>
 
