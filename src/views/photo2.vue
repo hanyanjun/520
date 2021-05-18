@@ -15,13 +15,13 @@ export default {
     data(){return{
         openArr : [],
         imgs : [
-    '../assets/1.jpg',
-    '../assets/4.jpg',
-    '../assets/8.jpg',
-    '../assets/11.jpg',
-    '../assets/14.jpg',
-    '../assets/16.jpg',
-    '../assets/17.jpg',
+    require('../assets/1.jpg'),
+    require('../assets/4.jpg'),
+    require('../assets/8.jpg'),
+    require('../assets/11.jpg'),
+    require('../assets/14.jpg'),
+    require('../assets/16.jpg'),
+    require('../assets/17.jpg'),
 ]
     }},
     setup() {
@@ -84,6 +84,7 @@ margin-bottom: 20px;
 img {
   width: 280px;
   height: 200px;
+  object-fit: contain;
   -webkit-box-shadow: 0px 0px 15px -1px rgba(0, 0, 0, 0.75);
   box-shadow: 0px 0px 15px -1px rgba(0, 0, 0, 0.75);
 }
